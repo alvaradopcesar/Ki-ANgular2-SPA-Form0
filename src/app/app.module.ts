@@ -5,14 +5,26 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
+import { CoreModule } from './core/core.module';
+import { LayoutModule } from './layout/layout.module';
+import { SharedModule } from './shared/shared.module';
+import { RoutesModule } from './routes/routes.module';
+
+import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 @NgModule({
   declarations: [
-    AppComponent
+    CoreModule,
+    AppComponent,
+    LayoutModule,
+    SharedModule,
+    RoutesModule
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
